@@ -1,8 +1,4 @@
-angular
-  .module('app')
-  .factory('AuthService', AuthService);
-
-function AuthService(store) {
+angular.module('app').factory('AuthService', function AuthService(store) {
   var service = {
     token: store.get('auth-token'),
     unsetToken: function() {
@@ -16,4 +12,4 @@ function AuthService(store) {
   };
 
   return service;
-}
+});

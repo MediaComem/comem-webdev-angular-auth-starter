@@ -1,8 +1,4 @@
-angular
-  .module('app')
-  .controller('LoginCtrl', LoginCtrl);
-
-function LoginCtrl(AuthService, $http, $log, $state) {
+angular.module('app').controller('LoginCtrl', function LoginCtrl(AuthService, $http, $log, $state) {
   var login = this;
 
   login.user = {};
@@ -23,4 +19,4 @@ function LoginCtrl(AuthService, $http, $log, $state) {
     })
 
   }
-}
+});
