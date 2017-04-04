@@ -9,17 +9,18 @@ angular
     .run(AppRun);
 
 function AppConfig($stateProvider, $urlRouterProvider) {
-    $stateProvider
-    .state('login', {
+    $stateProvider.state('login', {
         url: '/login',
         templateUrl: './templates/login.html',
         controller: 'LoginCtrl as login'
-    })
-    .state('home', {
+    });
+
+    $stateProvider.state('home', {
         url: '',
         templateUrl: './templates/main.html'
-    })
-    .state('second', {
+    });
+
+    $stateProvider.state('second', {
         url: '/second',
         templateUrl: './templates/second.html'
     });
